@@ -1,13 +1,13 @@
 ---
 services:
   db:
-    image: akhila2701/libapp:dbimage
+    image: akhila2701/libapp:db_image
     ports:
       - "3306:3306"
     deploy:
       replicas: 1
   auth_service:
-    image: akhila2701/libapp:authimage
+    image: akhila2701/libapp:auth_image
     ports:
       - "5001:5001"
     deploy:
@@ -15,7 +15,7 @@ services:
     depends_on:
       - db
   book_service:
-    image: akhila2701/libapp:bookimage
+    image: akhila2701/libapp:book_image
     ports:
       - "5002:5002"
     deploy:
@@ -23,7 +23,7 @@ services:
     depends_on:
       - db
   borrow_service:
-    image: akhila2701/libapp:borrowimage
+    image: akhila2701/libapp:borrow_image
     ports:
       - "5003:5003"
     deploy:
