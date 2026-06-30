@@ -79,4 +79,3 @@ services:
       - auth_service
       - book_service
       - borrow_service
-      - borrow_service
